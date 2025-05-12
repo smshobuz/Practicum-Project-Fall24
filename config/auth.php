@@ -40,6 +40,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'playerGuard' => [
+            'driver' => 'session',
+            'provider' => 'playerProvider',
+        ],
     ],
 
     /*
@@ -63,6 +67,10 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => env('AUTH_MODEL', App\Models\User::class),
+        ],
+        'playerProvider' => [
+            'driver' => 'eloquent',
+            'model' => env('AUTH_MODEL', App\Models\Registration::class),
         ],
 
         // 'users' => [
